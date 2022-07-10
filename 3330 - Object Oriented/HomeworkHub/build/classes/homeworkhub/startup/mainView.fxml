@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFFFE0; -fx-border-color: #DEB887; -fx-border-width: 5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="homeworkhub.startup.mainController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="300.0">
+         <HBox.margin>
+            <Insets right="10.0" />
+         </HBox.margin>
+         <children>
+            <Label fx:id="nameLabel" alignment="CENTER" text="NAME:">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Menlo Regular" size="24.0" />
+               </font>
+            </Label>
+            <Label text="Assignment Name" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Menlo Regular" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="assignmentField" prefHeight="35.0" prefWidth="280.0" style="-fx-border-color: #DEB887; -fx-border-width: 3;" />
+            <Label text="Description" textAlignment="CENTER">
+               <font>
+                  <Font name="Menlo Regular" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <TextArea fx:id="desField" prefHeight="93.0" prefWidth="280.0" style="-fx-border-width: 3; -fx-border-color: #DEB887;" />
+            <DatePicker fx:id="datePicker" prefHeight="27.0" prefWidth="281.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </DatePicker>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="switchButton" onAction="#switchBack" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #FFA07A;" text="Switch Student">
+                     <font>
+                        <Font name="Menlo Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="createButton" onAction="#create" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" style="-fx-border-width: 0; -fx-background-color: #90EE90;" text="Create" textAlignment="CENTER">
+                     <font>
+                        <Font name="Menlo Regular" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <ListView fx:id="listView" prefHeight="370.0" prefWidth="261.0" style="-fx-background-color: #FFFFC0;">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </ListView>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</HBox>

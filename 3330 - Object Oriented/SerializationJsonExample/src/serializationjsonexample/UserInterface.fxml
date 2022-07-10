@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="serializationjsonexample.UserInterfaceController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleOpen" text="Open" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleSave" text="Save" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleClose" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleAbout" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass">
+          <stylesheets>
+              <URL value="@userinterface.css" />
+          </stylesheets>
+         <children>
+            <Label layoutX="22.0" layoutY="31.0" text="First Name:" />
+            <Label layoutX="23.0" layoutY="68.0" text="Last Name:" />
+            <Label layoutX="43.0" layoutY="101.0" text="Gender:" />
+            <Label layoutX="64.0" layoutY="136.0" text="Age:" />
+            <TextField fx:id="firstNameTextField" layoutX="97.0" layoutY="28.0" prefHeight="26.0" prefWidth="254.0" />
+            <TextField fx:id="lastNameTextField" layoutX="97.0" layoutY="63.0" prefHeight="26.0" prefWidth="254.0" />
+            <TextField fx:id="ageTextField" layoutX="97.0" layoutY="131.0" prefHeight="26.0" prefWidth="48.0" />
+            <ComboBox fx:id="genderComboBox" layoutX="97.0" layoutY="97.0" prefHeight="26.0" prefWidth="130.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="switchscenes.Page2Controller">
+   <children>
+      <Label layoutX="279.0" layoutY="142.0" text="Page 2" />
+      <Label fx:id="infoLabel" layoutX="283.0" layoutY="183.0" text="Label" />
+      <Button layoutX="236.0" layoutY="229.0" mnemonicParsing="false" onAction="#goBackToPage1" text="Go back to page 1" />
+      <TextField fx:id="textField" layoutX="217.0" layoutY="83.0" />
+      <Label fx:id="labelForTextField" layoutX="102.0" layoutY="88.0" text="DataFromPage1:" />
+   </children>
+</AnchorPane>

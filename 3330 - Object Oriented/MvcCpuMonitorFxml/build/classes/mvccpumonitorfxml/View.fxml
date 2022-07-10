@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- @author Professor Wergeles <Professor Wergeles at cs3330@missouri.edu> --> 
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="520.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mvccpumonitorfxml.Controller">
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+    <children>
+      <StackPane prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="214.0" fitWidth="331.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
+               <image>
+                  <Image url="@clockface.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="hand" fitHeight="186.0" fitWidth="190.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@hand.png" />
+               </image>
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+            </ImageView>
+         </children>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </StackPane>
+      <VBox alignment="CENTER" prefHeight="217.0" prefWidth="250.0" spacing="20.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="55.0" prefWidth="600.0">
+               <children>
+                  <Text fx:id="cpuLabel" strokeType="OUTSIDE" strokeWidth="0.0" text="--.--%" textAlignment="CENTER" wrappingWidth="147.6064453125">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <TilePane alignment="CENTER" hgap="30.0" prefHeight="48.0" prefWidth="600.0">
+               <children>
+                  <Button fx:id="startStopButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#startStopMonitor" prefWidth="60.0" text="Start" textAlignment="CENTER" />
+               </children>
+            </TilePane>
+         </children>
+         <VBox.margin>
+            <Insets bottom="20.0" top="20.0" />
+         </VBox.margin>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

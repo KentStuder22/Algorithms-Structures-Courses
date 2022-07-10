@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="krspcpmvcstopwatchf21.Controller">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="450.0" prefWidth="284.0">
+         <children>
+            <Label prefHeight="45.0" prefWidth="242.0" text="MVC Timer Stopwatch FXML" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <StackPane prefHeight="194.0" prefWidth="283.0">
+               <children>
+                  <ImageView fx:id="clockImage" fitHeight="200.0" fitWidth="200.0">
+                     <image>
+                        <Image url="@clockface.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="handImage" fitHeight="200.0" fitWidth="200.0">
+                     <image>
+                        <Image url="@hand.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </StackPane>
+            <Text fx:id="middleTime" strokeType="OUTSIDE" strokeWidth="0.0" text="--:--:--.--" textAlignment="CENTER" wrappingWidth="117.29296875">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="283.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Timer" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" right="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Text fx:id="timerText" strokeType="OUTSIDE" strokeWidth="0.0" text="--:--" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="5.0" right="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="22.0" prefWidth="283.0">
+               <children>
+                  <Text fx:id="lapText" strokeType="OUTSIDE" strokeWidth="0.0" text="Lap -: --:--:--.--">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" right="10.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="55.0" prefWidth="283.0">
+               <children>
+                  <Label text="Average Lap Time:" textAlignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Text fx:id="avgLapText" strokeType="OUTSIDE" strokeWidth="0.0" text="--:--:--.--">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="53.0" prefWidth="283.0">
+               <children>
+                  <Button fx:id="startStop" mnemonicParsing="false" onAction="#handleStartStop" prefWidth="100.0" text="Start" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="recordReset" mnemonicParsing="false" onAction="#handleRecordReset" prefWidth="100.0" text="Record" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox prefHeight="450.0" prefWidth="368.0">
+         <children>
+            <LineChart fx:id="lineChart" animated="false" legendVisible="false" prefHeight="225.0" title="Recorded Lap Time">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis autoRanging="false" lowerBound="0" minorTickCount="1" side="LEFT" tickUnit="1.0" upperBound="5" />
+              </yAxis>
+            </LineChart>
+            <AreaChart fx:id="areaChart" createSymbols="false" legendVisible="false" prefHeight="225.0" title="Average Lap Time">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis autoRanging="false" lowerBound="0" minorTickCount="1" side="LEFT" tickUnit="1.0" upperBound="5" />
+              </yAxis>
+            </AreaChart>
+         </children>
+      </VBox>
+   </children>
+</HBox>
